@@ -33,7 +33,7 @@ public class MainClass {
 			for (i = 0; i < 2; i++) {
 				final String message = createJson();
 				ByteString data = ByteString.copyFromUtf8(message);
-				System.out.println("> publishing '" + message + "' to topic:" + TOPIC_NAME);
+				System.out.println("> publishing '" + message + "' to topics:" + TOPIC_NAME);
 				
 				PubsubMessage pubsubMessage = PubsubMessage.newBuilder().setData(data).build();
 				ApiFuture<String> future = publisher.publish(pubsubMessage);
